@@ -693,7 +693,7 @@ $btn-mb: 0.5rem;
   width: $sidebar-width;
   z-index: 99;
   background: url('/assets/img/favicons/사이드바\ 1920.jpg');
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   border-right: 1px solid var(--sidebar-border-color);
 
