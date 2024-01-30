@@ -693,8 +693,8 @@ $btn-mb: 0.5rem;
   width: $sidebar-width;
   z-index: 99;
   background: url('/assets/img/사이드바\ 1920.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
   border-right: 1px solid var(--sidebar-border-color);
 
   /* Hide scrollbar for Chrome, Safari and Opera */
