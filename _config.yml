@@ -16,7 +16,7 @@ timezone: Asia/Seoul
 
 title: Vincent # the main title
 
-tagline: Vincent's Programming Conquests # it will display as the sub-title
+tagline: Vincent's Programming # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A minimal, responsive and feature-rich Jekyll theme for technical writing.
