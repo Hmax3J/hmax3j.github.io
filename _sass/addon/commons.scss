@@ -691,7 +691,7 @@ $btn-mb: 0.5rem;
   height: 100%;
   overflow-y: auto;
   width: $sidebar-width;
-  z-index: 1;
+  z-index: 99;
   background: url('/assets/img/사이드바\ 1920.jpg');
   background-size: cover;
   background-position: center;
