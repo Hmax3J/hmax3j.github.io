@@ -95,8 +95,8 @@ gemfile.lock에 의존성 정보를 저장하는데 bundle install을 통해 생
 gemfile을 사용하는 이유는 일관성 유지, 버전 충돌 방지 등이 있다. <br>
 앞으로는 jekyll serve 대신 bundle exec 를 사용해야겠다. <br>
 
->5.jekyll serve 실행 시 나온 address인 <br>
-<span style='background-color:LavenderBlush; color:red'>127.0.0.1:4000</span>을 브라우저 주소창에 입력하면 아래 이미지와 같이 홈페이지가 나타난다. <br>
+>5.jekyll serve 실행 시 적용된 address <br>
+<span style='background-color:LavenderBlush; color:red'>127.0.0.1:4000</span>을 브라우저 주소창에 입력하면 아래 이미지와 비슷한 내용의 홈페이지가 나타난다. <br>
 ![downJekyll5](/assets/img/postImg/GitHubBlog/createBlog2/jekyllDownload5.JPG) <br>
 필자는 이미 블로그를 만들어버려서 jekyll 초기 화면이 없어 구글의 이미지를 발췌했다. <br>
 위 이미지의 출처는 <a href='https://opensource.com/article/21/9/build-website-jekyll' target='_blank' style='color:red'>여기</a> 다. <br>
