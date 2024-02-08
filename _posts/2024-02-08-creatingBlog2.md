@@ -102,5 +102,5 @@ gemfile을 사용하는 이유는 일관성 유지, 버전 충돌 방지 등이 
 위 이미지의 출처는 <a href='https://opensource.com/article/21/9/build-website-jekyll' target='_blank' style='color:red'>여기</a> 다. <br>
 여기까지의 미션이 블로그 테마를 적용하기 전에 해야하는 필수 미션이다. <br>
 
->## <span style='color:#1E90FF'>NEXT STEP. </span>
-<blockquote class='prompt-tip'>다음 미션은 블로그에 테마를 적용해보자.</blockquote>
+>## <span style='color:#1E90FF'>NEXT STEP.</span>
+<blockquote class='prompt-info'>다음 미션은 블로그에 테마를 적용해보자.</blockquote>
