@@ -168,6 +168,8 @@ defaults:
 sass:
   style: compressed
 
+future: true
+
 compress_html:
   clippings: all
   comments: all
