@@ -1,4 +1,5 @@
 ---
+published: true
 title: "깃허브 블로그 만들기 - Four"
 date: 2024-02-09 00:00:00 AM +09:00
 categories: [GitHubBlog]
