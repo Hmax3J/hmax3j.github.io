@@ -33,4 +33,4 @@ fork나 clone으로 하는 사람들도 있겠지만 필자는 ZIP으로 하는�
 다음 포스팅에서 설정을 해보도록 하자. <br>
 
 >## <span style='color:#1E90FF'>NEXT STEP.</span>
-<blockquote class='prompt-tip'>다음 미션은 다른 방문자에게 내가 만든 블로그를 보여주도록 하자.</blockquote>
+<blockquote class='prompt-tip'>다음 미션은 다른 방문자가 내가 만든 블로그를 볼 수 있도록 하자.</blockquote>
