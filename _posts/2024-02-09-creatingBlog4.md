@@ -55,3 +55,4 @@ Windows.. 사람을 강하게 키우는구나.. <br>
 <span style='color:red'>page-deploy.yml.hook</span>를 제외하고 다 삭제한다. <br>
 <span style='background-color:LavenderBlush; color:red'>page-deploy.yml.hook</span>에서
 <span style='color:red'>.hook</span>을 지운다. <br>
+왜 안되는걸까나
