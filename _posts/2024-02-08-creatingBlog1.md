@@ -32,4 +32,4 @@ cmd에서 git clone을 해도 되지만 압축해제 하는 것이 더 편한 �
 여기까지 되었다면 첫 번째 미션은 끝났다. <br>
 
 >## <span style='color:#1E90FF'>NEXT STEP. </span>
-다음 미션은 블로그에 테마를 적용하기 전 필수 미션이다. <br>
+<blockquote class='prompt-tip'>다음 미션은 블로그에 테마를 적용하기 전 필수 미션이다.</blockquote>

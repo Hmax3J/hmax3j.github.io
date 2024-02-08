@@ -103,4 +103,4 @@ gemfile을 사용하는 이유는 일관성 유지, 버전 충돌 방지 등이 
 여기까지의 미션이 블로그 테마를 적용하기 전에 해야하는 필수 미션이다. <br>
 
 >## <span style='color:#1E90FF'>NEXT STEP. </span>
-다음 미션은 블로그에 테마를 적용해보자.
+<blockquote class='prompt-tip'>다음 미션은 블로그에 테마를 적용해보자.</blockquote>
