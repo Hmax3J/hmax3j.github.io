@@ -56,4 +56,17 @@ Windows.. 사람을 강하게 키우는구나.. <br>
 <span style='color:red'>page-deploy.yml.hook</span>를 제외하고 다 삭제한다. <br>
 <span style='background-color:LavenderBlush; color:red'>page-deploy.yml.hook</span>에서
 <span style='color:red'>.hook</span>을 지운다. <br>
-왜 안되는거야
+
+>![gitSet5](/assets/img/postImg/GitHubBlog/createBlog4/gitHubSetting5.JPG) <br>
+page-deploy.yml 파일을 실행해 들어가면 <br>
+상단 부분에 위 이미지의 빨간 박스처럼 브랜치가 main, master 2개가 적혀있다. <br>
+여기서 본인의 브렌치와 맞지 않는 것을 주석처리 한다. <br>
+![gitSet6](/assets/img/postImg/GitHubBlog/createBlog4/gitHubSetting6.JPG) <br>
+필자는 main이라 master를 주석처리 했다. <br>
+파일 초기화 및 설정은 거의 다 했다. 하지만 아직 많이 남았다...<br>
+깃허브 블로그 진짜 힘들구나 싶었다. 사람들이 다른 블로그 플랫폼을 쓰는 것이 이해가 되었다. <br>
+이제 깃 액션을 이용해 빌드와 배포를 하면 거의 마지막이 될 것 같다. 찐막 !!! <br>
+이 부분은 다음 미션으로 넘기겠다. <br>
+
+>## <span style='color:#1E90FF'>NEXT STEP.</span>
+<blockquote class='prompt-tip'>다음 미션은 빌드와 배포를 해보자.</blockquote>

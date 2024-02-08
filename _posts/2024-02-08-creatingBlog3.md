@@ -29,8 +29,8 @@ fork나 clone으로 하는 사람들도 있겠지만 필자는 ZIP으로 하는�
 4.repo에 붙여넣고 브라우저 주소창에 <span style='background-color:LavenderBlush; color:red'>127.0.0.1:4000</span>을 입력하자. <br>
 그렇다면 위 이미지와 같은 chirpy테마가 적용되어 있는 홈페이지가 출력된다. <br>
 여기까지는 본인만 확인할 수 있는 로컬 홈페이지였다. <br>
-모든 방문자가 내 블로그를 확인하게 하려면 github에서 따로 설정을 해주어야 한다. <br>
+이제 테마에 적용된 파일들을 본인들의 상황에 맞게 수정하거나 삭제해야 한다. <br>
 다음 포스팅에서 설정을 해보도록 하자. <br>
 
 >## <span style='color:#1E90FF'>NEXT STEP.</span>
-<blockquote class='prompt-tip'>다음 미션은 다른 방문자가 내가 만든 블로그를 볼 수 있도록 하자.</blockquote>
+<blockquote class='prompt-tip'>다음 미션은 파일 초기화 및 수정을 해보자.</blockquote>
