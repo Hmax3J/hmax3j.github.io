@@ -1,5 +1,5 @@
 ---
-title: "깃허브 블로그 만들기 - First"
+title: "깃허브 블로그 만들기 - One"
 date: 2024-02-08 02:26:00 +09:00
 categories: [GitHubBlog]
 ---

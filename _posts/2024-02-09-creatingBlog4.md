@@ -9,7 +9,7 @@ categories: [GitHubBlog]
 블로그에 테마를 설정하고 난 뒤 정상적으로 되었는지 확인을 해보자. <br>
 <span style='background-color:LavenderBlush; color:red'>Window 사용자는 안된 것이 분명 있을 것이다..</span> <br>
 
->1.로컬 홈페이지에 접속해 테마모드를 눌러보거나 사이드바를 클릭한 후 프롬프트 창을 한 번 보자. <br>
+>## 1. 로컬 홈페이지 접속해서 새로고침(F5)한 후 프롬프트 창을 한 번 보자.
 ![gitSet1](/assets/img/postImg/GitHubBlog/createBlog4/gitHubSetting1.JPG) <br>
 위 이미지 처럼 assets/js/dist에 js 파일이 없다고 뜰 것이다. <br>
 필자는 이 부분을 못보고 블로그의 다크모드가 적용이 안되어 이유를 한참을 구글링했다. <br>
@@ -19,7 +19,7 @@ categories: [GitHubBlog]
 왜 js파일이 없었는가 찾아봤는데 Window에서는 <span style='background-color:LavenderBlush; color:red'>bash tools/init</span>을 안해서 그렇다고 한다. <br>
 init은 맥이나 리눅스에서 가능하다고 한다. 이에 관한 것은 잠시후 다시 적겠다.<br>
 
->2.js파일을 다운로드 받아보자. <br>
+>## 2. js파일을 다운로드 받아보자.
 js파일을 다운 받으려면 <span style='background-color:LavenderBlush; color:red'>NODE_ENV=production npx rollup -c --bundleConfigAsCjs</span> 코드를 실행해야 한다. <br>
 어떻게 실행하느냐... 필자는 여기서 또 엄청 헤맸다 ㅠ^ㅠ <br>
 ![gitSet2](/assets/img/postImg/GitHubBlog/createBlog4/gitHubSetting2.JPG) <br>
@@ -44,10 +44,11 @@ cmd에서 set을 이용하면 되는지 확인을 해보았다. <br>
 그렇다... Mac에서는 bash tools/init을 하면 자동으로 다 된다고 하던데.. ~~사실 잘 모름;;~~ <br>
 Windows.. 사람을 강하게 키우는구나.. <br>
 우리 Windows 용사들이여, 우리는 init을 하지 않았기 때문에 직접 파일 수정을 해야 한다 ! <br>
-아래 파일들을 삭제해보자. <br>
+
+>## 3. 아래 파일들을 삭제해보자.
 <span style='background-color:LavenderBlush; color:red'>.travis.yml</span> 필자는 없었다. <br>
 <span style='background-color:LavenderBlush; color:red'>_posts 폴더 하위의 파일들</span> chirpy에서 샘플로 제공해주는 post다. 필요없으면 삭제한다. <br>
-<span style='background-color:LavenderBlush; color:red'>docs 폴더</span>를 어디 옮겨놨는데 어디에 옮긴지 찾지 못했다. 아직까지 문제는 없는 것 같다. <br>
+<span style='background-color:LavenderBlush; color:red'>docs 폴더</span> 삭제한다. <br>
 <span style='background-color:LavenderBlush; color:red'>.github 폴더</span>에서
 <span style='color:red'>workflows 폴더</span>를 제외하고 다 삭제한다. <br>
 <span style='background-color:LavenderBlush; color:red'>.github/workflows/</span>에서
@@ -56,16 +57,26 @@ Windows.. 사람을 강하게 키우는구나.. <br>
 <span style='background-color:LavenderBlush; color:red'>page-deploy.yml.hook</span>에서
 <span style='color:red'>.hook</span>을 지운다. <br>
 
+>## 4. 빌드 및 배포 파일을 설정해보자.
 >![gitSet5](/assets/img/postImg/GitHubBlog/createBlog4/gitHubSetting5.JPG) <br>
 page-deploy.yml 파일을 실행해 들어가면 <br>
 상단 부분에 위 이미지의 빨간 박스처럼 브랜치가 main, master 2개가 적혀있다. <br>
 여기서 본인의 브렌치와 맞지 않는 것을 주석처리 한다. <br>
 ![gitSet6](/assets/img/postImg/GitHubBlog/createBlog4/gitHubSetting6.JPG) <br>
 필자는 main이라 master를 주석처리 했다. <br>
+여기서 빌드 및 배포 파일은 CI / CD를 할 때 필요하다. 다음 포스팅에서 적겠다. <br>
+
+>## 5. 종속성 설치를 하자.
+프롬프트에서 루트 디렉토리로 이동해 bundle을 입력하자. <br>
+bundle을 하는 이유는 종속성 설치를 해야하기 때문이다. <br>
+![gitSet7](/assets/img/postImg/GitHubBlog/createBlog4/gitHubSetting7.JPG) <br>
+
+>## <span style='color:#1E90FF'>이제는 진짜 진짜 끝난거지..?</span>
+후후... 아닐 것이다... <br>
 파일 초기화 및 설정은 거의 다 했다. 하지만 아직 많이 남았다...<br>
 깃허브 블로그 진짜 힘들구나 싶었다. 사람들이 다른 블로그 플랫폼을 쓰는 것이 이해가 되었다. <br>
 이제 깃 액션을 이용해 빌드와 배포를 하면 거의 마지막이 될 것 같다. 찐막 !!! <br>
 이 부분은 다음 미션으로 넘기겠다. <br>
 
 >## <span style='color:#1E90FF'>NEXT STEP.</span>
-<blockquote class='prompt-tip'>다음 미션은 빌드와 배포를 해보자.</blockquote>
+<blockquote class='prompt-tip'>다음 미션은 빌드와 배포를 하는 깃허브 액션을 설정해보자.</blockquote>
