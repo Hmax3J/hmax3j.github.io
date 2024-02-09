@@ -1,5 +1,4 @@
 ---
-published: true
 title: "깃허브 블로그 만들기 - Four"
 date: 2024-02-09 00:00:00 AM +09:00
 categories: [GitHubBlog]
@@ -44,7 +43,7 @@ cmd에서 set을 이용하면 되는지 확인을 해보았다. <br>
 왜냐하면, 우리는 바로 Windows를 사용하고 있지 않은가 ? <br>
 그렇다... Mac에서는 bash tools/init을 하면 자동으로 다 된다고 하던데.. ~~사실 잘 모름;;~~ <br>
 Windows.. 사람을 강하게 키우는구나.. <br>
-우리 Windows 용사들이여, 우리는 init을 하지 않았기 때문에 수동으로 파일 수정을 해야 한다 ! <br>
+우리 Windows 용사들이여, 우리는 init을 하지 않았기 때문에 직접 파일 수정을 해야 한다 ! <br>
 아래 파일들을 삭제해보자. <br>
 <span style='background-color:LavenderBlush; color:red'>.travis.yml</span> 필자는 없었다. <br>
 <span style='background-color:LavenderBlush; color:red'>_posts 폴더 하위의 파일들</span> chirpy에서 샘플로 제공해주는 post다. 필요없으면 삭제한다. <br>
