@@ -692,7 +692,7 @@ $btn-mb: 0.5rem;
   overflow-y: auto;
   width: $sidebar-width;
   z-index: 99;
-  background: url('/assets/img/사이드바\ 1920.jpg');
+  background: url('/assets/img/sidebar1920.jpg');
   background-size: cover;
   background-position: center;
   border-right: 1px solid var(--sidebar-border-color);
@@ -755,13 +755,13 @@ $btn-mb: 0.5rem;
       @extend %clickable-transition;
       @extend %sidebar-link-hover;
 
-      color: #FBEAEB;
+      color: #FBEAEB; // 타이틀 글꼴 색상 변경
     }
   }
 
   .site-subtitle {
     font-size: 95%;
-    color: #FBEAEB;
+    color: #FBEAEB; // 서브 타이틀 글꼴 색상 변경
     margin-top: 0.25rem;
     word-spacing: 1px;
     -webkit-user-select: none;
@@ -793,14 +793,14 @@ $btn-mb: 0.5rem;
 
         i {
           font-size: 95%;
-          color: #FBEAEB;
+          color: #FBEAEB; // 사이드바 아이콘 색상 변경
           opacity: 0.8;
           margin-right: 1.5rem;
         }
 
         span {
           font-size: 90%;
-          color: #FBEAEB;
+          color: #FBEAEB; // 사이드바 글꼴 색상 변경
           letter-spacing: 0.2px;
         }
       }
