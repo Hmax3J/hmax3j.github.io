@@ -21,12 +21,11 @@ Code를 눌러 Download ZIP을 하자. <br>
 2.ZIP 압축을 풀고난 후 파일을 전부 선택해 복사한다.
 
 >3.복사한 파일을 본인 블로그 repo에 붙여넣는다.
-![chirpyDown3](/assets/img/postImg/GitHubBlog/createBlog3/chirpyDownload3.JPG) <br>
-위 이미지와 같이 본인이 만든 블로그 repo에 붙여넣으면 된다. <br>
+본인이 만든 블로그 repo에 붙여넣으면 된다. <br>
 fork나 clone으로 하는 사람들도 있겠지만 필자는 ZIP으로 하는게 편리했다. <br>
 
->![chirpyDown4](/assets/img/postImg/GitHubBlog/createBlog3/chirpyDownload4.JPG) <br>
-4.repo에 붙여넣고 브라우저 주소창에 <span style='background-color:LavenderBlush; color:red'>127.0.0.1:4000</span>을 입력하자. <br>
+>4.repo에 붙여넣고 브라우저 주소창에 <span style='background-color:LavenderBlush; color:red'>127.0.0.1:4000</span>을 입력하자. <br>
+![chirpyDown3](/assets/img/postImg/GitHubBlog/createBlog3/chirpyDownload3.JPG) <br>
 그렇다면 위 이미지와 같은 chirpy테마가 적용되어 있는 홈페이지가 출력된다. <br>
 여기까지는 본인만 확인할 수 있는 로컬 홈페이지였다. <br>
 이제 테마에 적용된 파일들을 본인들의 상황에 맞게 수정하거나 삭제해야 한다. <br>
