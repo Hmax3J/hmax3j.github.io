@@ -51,8 +51,7 @@ sitemap을 클릭해서 이동한다. <br>
 ![searchBlog6](/assets/img/postImg/GitHubBlog/createBlog8/searchBlog6.JPG) <br>
 새 사이트맵 추가에 사이트맵 URL을 작성한다. 루트 디렉토리에 저장했으니 sitemap.xml만 입력하고 제출한다. <br>
 ![searchBlog7](/assets/img/postImg/GitHubBlog/createBlog8/searchBlog7.JPG) <br>
-위와 같이 나타날텐데 필자는 오류가 났다. 찾아보니 오류는 갱신이 안되어서 나타나는 거라고 한다. <br>
-기다리면 없어진다고 한다. 필자는 기다려보겠다. 그리고 시간이 지나야 등록이 된다고 한다. <br>
+위와 같이 나타난다. 시간이 지나야 등록이 된다고 한다. <br>
 얼마의 시간을 기다려야 할 지 모르겠다 ㅠ^ㅠ 빨리 등록되면 좋겠다. 가슴이 두근두근 하는고만 ! <br>
 다음은 Naver에 등록해보자. <br>
 
