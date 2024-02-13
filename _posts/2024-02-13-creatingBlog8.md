@@ -15,7 +15,7 @@ sitemap은 웹 사이트의 페이지 구조 및 갱신 정보를 검색 엔진�
 검색 엔진이 웹 페이지를 효율적으로 크롤링하고, 검색 결과를 업데이트하는 데 도움을 준다. <br>
 그래서 깃허브 블로그를 검색 엔진에 노출하려면 sitemap.xml을 생성해야 한다. <br>
 루트 디렉토리에 sitemap.xml 이름의 파일을 생성한다. <br>
-그리고 링크된 <a href='https://github.com/Hmax3J/Hmax3J.github.io/blob/main/sitemap.xml' target='_blank' style='color:red'>이 코드</a>를 붙여넣는다. <br>
+그리고 링크된 <a href='https://github.com/hmax3j/hmax3j.github.io/blob/main/sitemap.xml' target='_blank' style='color:red'>이 코드</a>를 붙여넣는다. <br>
 로컬서버에서 sitemap.xml을 확인한다. <br>
 ![searchBlog1](/assets/img/postImg/GitHubBlog/createBlog8/searchBlog1.JPG) <br>
 위 이미지처럼 나온다면 정상적으로 생성이 완료되었다. <br>
@@ -26,14 +26,14 @@ robots.txt은 검색 엔진에게 어떤 부분을 크롤링하고 어떤 부분
 ```
 User-agent: *
 Allow: /
-Sitemap: https://Hmax3J.github.io/sitemap.xml
+Sitemap: https://hmax3j.github.io/sitemap.xml
 ```
 여기서 sitemap은 본인의 블로그 주소를 입력해야 한다. <br>
 
 >## <span style='color:#1E90FF'>feed.xml을 생성해보자.</span>
 feed.xml은 블로그의 RSS(Really Simple Syndication) 피드를 생성하는 역할을 한다. <br>
 구독자들이 블로그의 컨텐츠를 쉽게 볼 수 있게 만든다. <br>
-루트 디렉토리에 feed.xml을 생성하자. 그리고 링크된 <a href='https://github.com/Hmax3J/Hmax3J.github.io/blob/main/feed.xml' target='_blank' style='color:red'>이 코드</a>를 붙여넣는다. <br>
+루트 디렉토리에 feed.xml을 생성하자. 그리고 링크된 <a href='https://github.com/hmax3j/hmax3j.github.io/blob/main/feed.xml' target='_blank' style='color:red'>이 코드</a>를 붙여넣는다. <br>
 이렇게 3개의 파일을 생성했으면 검색 엔진에 노출 시키기 전 준비는 모두 끝났다. <br>
 이제 본격적으로 검색 엔진에 블로그를 등록해보자. <br>
 

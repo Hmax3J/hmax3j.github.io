@@ -28,7 +28,7 @@ New를 클릭하면 아래와 같은 이미지의 내용이 나오게 된다. <b
 ![repoClone](/assets/img/postImg/GitHubBlog/createBlog1/repoClone.JPG) <br>
 Download.Zip한 파일의 압축을 푼 후 본인이 원하는 위치에 폴더를 이동한다. <br>
 cmd에서 git clone을 해도 되지만 압축해제 하는 것이 더 편한 것 같아 Zip으로 clone했다. <br>
-필자는 C:/dev/blog/Hmax3J.github.io 여기에 만들었다. <br>
+필자는 C:/dev/blog/hmax3j.github.io 여기에 만들었다. <br>
 여기까지 되었다면 첫 번째 미션은 끝났다. <br>
 
 >## <span style='color:#1E90FF'>NEXT STEP. </span>
