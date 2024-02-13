@@ -26,7 +26,7 @@ robots.txt은 검색 엔진에게 어떤 부분을 크롤링하고 어떤 부분
 ```
 User-agent: *
 Allow: /
-Sitemap: https://Hmax3j.github.io/sitemap.xml
+Sitemap: https://Hmax3J.github.io/sitemap.xml
 ```
 여기서 sitemap은 본인의 블로그 주소를 입력해야 한다. <br>
 

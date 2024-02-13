@@ -33,7 +33,7 @@ Source를 클릭하면 위 이미지와 같이 나타나는데 Github Actions를
 이제 이 파일을 본인의 환경에 맞게 바꾸어 주면 된다. <br>
 
 >## <span style='color:#1E90FF'>pages-deploy.yml 환경설정을 해보자.</span>
-아니 또 설정이야 ? <a href='https://hmax3j.github.io/posts/creatingBlog4/' target='_blank' style='color:red'>Four포스팅</a>에서 한 거 아니야? 라고 할 수 있겠지만 아니였던 것이다.. <br>
+아니 또 설정이야 ? <a href='https://Hmax3J.github.io/posts/creatingBlog4/' target='_blank' style='color:red'>Four포스팅</a>에서 한 거 아니야? 라고 할 수 있겠지만 아니였던 것이다.. <br>
 필자는 로컬에서 화면 구성이 잘 되었길래 깃 데스크톱으로 레포지토리에 push를 해보았다. <br>
 하지만 바아아아로 build 실패.. <br>
 ![gitCICD5](/assets/img/postImg/GitHubBlog/createBlog5/gitHubBuild5.JPG) <br>
