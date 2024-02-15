@@ -59,7 +59,7 @@ categories: [Portfolio, MovieCommunitySite]
    - 입력 정보 전송 -> 서버 -> 데이터베이스 매칭 -> 인증 성공 수행 <br>
    　　　　　　　　　데이터베이스 매칭 실패 -> 인증 실패 수행
    - 코드: RESTful API 'POST' 구현
-```
+```java
 @PostMapping("login")
 public User login(@RequestBody User userLogin, HttpSession session) {
 	User user = userService.loginValidate(userLogin);
@@ -71,15 +71,15 @@ public User login(@RequestBody User userLogin, HttpSession session) {
 }
 ```
    - 설명: 로그인은 상태 변경 동작이라 명확하게 나타내기 위해 REST API 사용 <br>
-   - 개선점 1. 비밀번호 해시처리 필요, Spring Security || 해시 함수 구현을 통해 개선 가능 <br>
-   　　　2. 토큰 기반의 인증 방식 도입시 세션보다 더욱 단순하게 관리 가능, JWT 활용으로 개선 가능 <br>
-   　　　3. 응답 형식 표준화 필요, ResponseEntity로 상태 코드와 메시지를 명시적으로 반환으로 개선 가능 <br>
-   　　　4. HTTPS 사용 고려, 이유는 ? 데이터 암호화로 데이터 변조나 도청을 방지, SEO 이점 <br>
+   - 개선점 1. 비밀번호 해시처리 필요 -> Spring Security || 해시 함수 구현을 통해 개선 가능 <br>
+   　　　2. 토큰 기반의 인증 방식 도입시 세션보다 더욱 단순하게 관리 가능 -> JWT 활용으로 개선 가능 <br>
+   　　　3. 응답 형식 표준화 필요 -> ResponseEntity로 상태 코드와 메시지를 명시적으로 반환으로 개선 가능 <br>
+   　　　4. HTTPS 사용 고려 -> 이유는 ? 데이터 암호화로 데이터 변조나 도청을 방지, SEO 이점 <br>
 
 >> **로그아웃**
    - 로그아웃 -> 세션 종료, 로그인 상태 해제 -> 리다이렉트 <br>
    - 코드:
-```
+```java
 @GetMapping("/logout")
 public ModelAndView logout(ModelAndView mv, HttpSession session) {
     session.invalidate();
@@ -88,9 +88,9 @@ public ModelAndView logout(ModelAndView mv, HttpSession session) {
 }
 ```
    - 설명: REST API 사용 <br>
-   - 개선점 1. GET은 보안에 취약, POST 메서드 사용으로 개선 가능 <br>
-   　　　2. 간소화 가능, 반환 타입 String으로 개선 가능 <br>
-```
+   - 개선점 1. GET은 보안에 취약 -> POST 메서드 사용으로 개선 가능 <br>
+   　　　2. 간소화 가능 -> 반환 타입 String으로 개선 가능 <br>
+```java
 @PostMapping("/logout")
 public String logout(HttpSession session) {
     session.invalidate();
@@ -99,5 +99,98 @@ public String logout(HttpSession session) {
 ```
 
 >> **회원가입**
-   - 추후 작성 <br>
+   - 입력 정보 전송 -> 서버 -> 데이터베이스 매칭 -> 인증 성공 수행 <br>
+   　　　　　　　　　데이터베이스 매칭 실패 -> 인증 실패 수행
    - 코드:
+```java
+@PostMapping("addUser")
+public void addUser(@RequestBody UserGenre userGenre) {
+	User user = userGenre.getUser();
+	userService.addUser(user);
+	User userNum = userService.getUser(user.getUserId());
+	List<Integer> genres = userGenre.getGenreNum();
+	for(int genre: genres) {
+		    userService.addUserGenre(userNum.getUserNum(), genre);
+	}
+}
+```
+   - 설명: REST API 사용, 선호장르는 없음, 단수, 복수 입력가능 <br>
+   - 개선점 1. 동시성 측면 고려 -> 트랜젝션 관리, 비지니스 로직을 서비스계층으로 분리로 개선 가능 <br>
+```java
+UserController 작성
+@PostMapping("addUser")
+public void addUser(@RequestBody UserGenre userGenre) {
+    User user = userGenre.getUser();
+    userService.addUser(user);
+    List<Integer> genres = userGenre.getGenreNum(); // 사용자 추가 후 바로 장르 추가
+    userService.addUserGenres(user.getUserId(), genres);
+} // UserController 비지니스 로직 제거
+```
+```java
+UserServiceImpl 작성
+@Override
+@Transactional
+public void addUserGenres(String userId, List<Integer> genreNums) {
+    User user = getUser(userId);
+    int userNum = user.getUserNum();
+    for (int genre : genreNums) {
+                addUserGenre(userNum, genre);
+    } // 비지니스 로직 추가
+}
+```
+```java
+UserServiceImpl 작성
+@Override
+@Transactional
+public void addUserGenre(int userNum, int genreNum) {
+    try {
+            // 데이터베이스 연결 및 트랜잭션 시작
+            Connection connection = // 데이터베이스 연결 객체 생성
+            connection.setAutoCommit(false); // 트랜잭션 시작
+            // SQL 쿼리를 사용하여 사용자와 장르 간의 관계 추가
+            String query = "INSERT INTO UserGenre (userNum, genreNum) VALUES (?, ?)";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+                    preparedStatement.setInt(1, userNum);
+                    preparedStatement.setInt(2, genreNum);
+                    preparedStatement.executeUpdate();
+        }
+            connection.commit(); // 트랜잭션 커밋
+    } catch (SQLException e) {
+            connection.rollback(); // 예외 발생 시 롤백
+            e.printStackTrace(); // 예외 처리는 적절하게 수행
+    } finally {
+            connection.close(); // 데이터베이스 연결 종료
+    }
+}
+```
+
+>> **마이페이지**
+   - 사용자 정보 조회 -> 뷰 전달 -> 사용자 정보 출력 <br>
+   - 코드:
+```java
+@GetMapping("mypage")
+public ModelAndView mypage(ModelAndView mv, HttpSession session) {
+		User user = userService.getUser((String)session.getAttribute("userId"));
+		mv.addObject("user", user);
+		mv.setViewName("user/mypage");
+		return mv;
+}
+```
+   - 설명: 정보 조회, 계정 관리, 로그아웃, 회원탈퇴 등의 기능 제공 <br>
+   - 개선점 1. 간소화 가능 -> 반환 타입 String으로 개선 가능 <br>
+    　　　　　　　　　 -> 모델에 직접 데이터 추가, 뷰 이름 반환으로 코드 간결화 가능 <br>
+```java
+@GetMapping("mypage")
+public String mypage(Model model, HttpSession session) {
+    User user = userService.getUser((String) session.getAttribute("userId"));
+    model.addAttribute("user", user);
+    return "user/mypage";
+}
+```
+
+>> **회원수정**
+   - 수정할 데이터 입력 -> 유효성 검사 -> 회원 정보 수정 <br>
+   - 코드:
+```
+
+```
