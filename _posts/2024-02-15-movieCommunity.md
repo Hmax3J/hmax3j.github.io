@@ -73,8 +73,8 @@ public User login(@RequestBody User userLogin, HttpSession session) {
    - 설명: 로그인은 상태 변경 동작이라 명확하게 나타내기 위해 REST API 사용 <br>
    - 개선점 1. 비밀번호 해시처리 필요 -> Spring Security || 해시 함수 구현을 통해 개선 가능 <br>
    　　　2. 토큰 기반의 인증 방식 도입시 세션보다 더욱 단순하게 관리 가능 -> JWT 활용으로 개선 가능 <br>
-   　　　3. 응답 형식 표준화 필요 -> ResponseEntity로 상태 코드와 메시지를 명시적으로 반환으로 개선 가능 <br>
-   　　　4. HTTPS 사용 고려 -> 이유는 ? 데이터 암호화로 데이터 변조나 도청을 방지, SEO 이점 <br>
+   　　　3. 응답 형식 표준화 필요 -> ResponseEntity로 상태 코드, 메시지 명시적 반환으로 개선 가능 <br>
+   　　　4. HTTPS 사용 고려 -> 데이터 암호화로 데이터 변조나 도청을 방지, SEO 이점 <br>
 
 >> **로그아웃**
    - 로그아웃 -> 세션 종료, 로그인 상태 해제 -> 리다이렉트 <br>
@@ -191,6 +191,46 @@ public String mypage(Model model, HttpSession session) {
 >> **회원수정**
    - 수정할 데이터 입력 -> 유효성 검사 -> 회원 정보 수정 <br>
    - 코드:
+```java
+@PutMapping("fixUser")
+public int fixUser(@RequestBody UserGenre userGenre) {
+		userService.delUserGenre(userGenre.getUser().getUserNum());
+		userService.fixUser(userGenre.getUser());
+		List<Integer> genres = userGenre.getGenreNum();
+		for(int genre: genres) {
+			userService.addUserGenre(userGenre.getUser().getUserNum(), genre);
+		}
+		return userService.fixUser(userGenre.getUser());
+}
 ```
+   - 설명: 사용자가 원하는 내용으로 데이터 수정 <br>
+   - 개선점 1. 데이터 일관성 유지 -> 트랜젝션으로 개선 가능 <br>
+    　　　2. 비동기 처리 고려 -> 응답 시간 향상 가능 But 코드 복잡성 증가, 가독성 저하 가능성 있음 <br> 　　　3. Soft Delete 고려 -> 데이터 보존, 복구 가능 But 데이터 크기 증가, 쿼리 복잡성 증가 <br>
 
+>> **회원탈퇴**
+   - 회원 탈퇴 -> 회원 탈퇴 ID Number 저장 <br>
+   - 코드:
+```java
+@PostMapping("addWithDrawal")
+public void addWithDrawal(@RequestBody User userNum, HttpSession session) {
+		userService.addWithDrawal(userNum.getUserNum());
+		session.invalidate();
+}
 ```
+   - 설명: 회원 탈퇴 테이블에 탈퇴한 ID 보관  <br>
+   - 개선점 1. 명확성 및 확장성 고려 -> DTO 클래스로 개선 가능 <br>
+   　　　2. 탈퇴 아이디 정보 고려 -> 토큰, 세션 등을 활용하여 탈퇴 정보 없이 관리 <br>
+
+>## 프로젝트 개선 방향
+>> **보안강화**
+   - Spring Security를 사용하거나 해시 함수 구현 <br>
+   - HTTPS 사용
+
+>> **JWT 도입**
+   - 효율적으로 세션 관리 <br>
+
+>> **클라이언트 통신 최적화**
+   - AJAX나 비동기 처리로 응답 속도 향상
+
+>> **코드 리팩토링 및 구조화**
+   - 비지니스 로직과 트랜잭션 관리를 서비스 계층으로 분리하여 확장성, 간결성 증가 <br>
