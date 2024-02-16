@@ -76,7 +76,7 @@ public User login(@RequestBody User userLogin, HttpSession session) {
    　　　3. 응답 형식 표준화 필요 -> ResponseEntity로 상태 코드, 메시지 명시적 반환으로 개선 가능 <br>
    　　　4. HTTPS 사용 고려 -> 데이터 암호화로 데이터 변조나 도청을 방지, SEO 이점 <br>
 
->> **로그아웃**
+>> <a href='https://hmax3j.github.io/posts/movieCommunityLogin' target='_blank' style='color:red'>**로그아웃**</a>
    - 로그아웃 -> 세션 종료, 로그인 상태 해제 -> 리다이렉트 <br>
    - 코드:
 ```java
