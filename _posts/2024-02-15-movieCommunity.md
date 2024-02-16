@@ -55,7 +55,7 @@ categories: [Portfolio, MovieCommunitySite]
    - Spring Boot, MyBatis를 활용하여 안정적이고 효율적인 백엔드 구조 구축
 
 >## 기능 구현
->> **로그인**
+>> <a href='https://hmax3j.github.io/posts/movieCommunityLogin' target='_blank' style='color:red'>**로그인**</a>
    - 입력 정보 전송 -> 서버 -> 데이터베이스 매칭 -> 인증 성공 수행 <br>
    　　　　　　　　　데이터베이스 매칭 실패 -> 인증 실패 수행
    - 코드: RESTful API 'POST' 구현
