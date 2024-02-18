@@ -98,7 +98,7 @@ public String logout(HttpSession session) {
 }
 ```
 
->> **회원가입**
+>> <a href='https://hmax3j.github.io/posts/movieCommunityCRUD' target='_blank' style='color:red'>**회원가입**</a>
    - 입력 정보 전송 -> 서버 -> 데이터베이스 매칭 -> 인증 성공 수행 <br>
    　　　　　　　　　데이터베이스 매칭 실패 -> 인증 실패 수행
    - 코드:
@@ -164,7 +164,7 @@ public void addUserGenre(int userNum, int genreNum) {
 }
 ```
 
->> **마이페이지**
+>> <a href='https://hmax3j.github.io/posts/movieCommunityCRUD' target='_blank' style='color:red'>**마이페이지**</a>
    - 사용자 정보 조회 -> 뷰 전달 -> 사용자 정보 출력 <br>
    - 코드:
 ```java
@@ -188,7 +188,7 @@ public String mypage(Model model, HttpSession session) {
 }
 ```
 
->> **회원수정**
+>> <a href='https://hmax3j.github.io/posts/movieCommunityCRUD' target='_blank' style='color:red'>**회원수정**</a>
    - 수정할 데이터 입력 -> 유효성 검사 -> 회원 정보 수정 <br>
    - 코드:
 ```java
@@ -207,7 +207,7 @@ public int fixUser(@RequestBody UserGenre userGenre) {
    - 개선점 1. 데이터 일관성 유지 -> 트랜젝션으로 개선 가능 <br>
     　　　2. 비동기 처리 고려 -> 응답 시간 향상 가능 But 코드 복잡성 증가, 가독성 저하 가능성 있음 <br> 　　　3. Soft Delete 고려 -> 데이터 보존, 복구 가능 But 데이터 크기 증가, 쿼리 복잡성 증가 <br>
 
->> **회원탈퇴**
+>> <a href='https://hmax3j.github.io/posts/movieCommunityCRUD' target='_blank' style='color:red'>**회원탈퇴**</a>
    - 회원 탈퇴 -> 회원 탈퇴 ID Number 저장 <br>
    - 코드:
 ```java
