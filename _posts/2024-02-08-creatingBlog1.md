@@ -1,7 +1,8 @@
 ---
 title: "깃허브 블로그 만들기 - One"
-date: 2024-02-08 02:26:00 +09:00
+date: 2024-02-08 06:00:00 PM +09:00
 categories: [GitHubBlog]
+tags: [githubblog, gitpage]
 ---
 ***
 
