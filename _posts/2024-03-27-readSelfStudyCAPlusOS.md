@@ -14,4 +14,4 @@ tags: [book, cs]
 책을 읽는 재미가 있다. 인프런에 저자님이 올린 무료 강의도 있어서 이것도 다 볼 생각이다. <br>
 그리고, 모자라면 1회독이나 2회독 정도 더 하고 좀 더 심화된 운영체제 책을 읽어볼 생각이다. <br>
 
-> ![book](/assets/img/postImg/Retrospective/Reading/SelfStudyCAPlusOS/bookImg.JPG)
+> ![book](/assets/img/postImg/Retrospective/Reading/selfStudyCAPlusOS/bookImg.JPG)

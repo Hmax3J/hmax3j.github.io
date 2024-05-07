@@ -13,4 +13,4 @@ tags: [book, cs]
 종이 책으로 샀는데 후회 하지 않을 것 같다. 몇 회독 더 할 예정이다. <br>
 앞으로도 꾸준히 책을 읽고 느낀 점이나, 까먹고 싶지 않은 내용을 포스팅할 예정이다. <br>
 
-> ![book](/assets/img/postImg/Retrospective/Reading/TechInterviewNote/bookImg.JPG)
+> ![book](/assets/img/postImg/Retrospective/Reading/techInterviewNote/bookImg.JPG)
