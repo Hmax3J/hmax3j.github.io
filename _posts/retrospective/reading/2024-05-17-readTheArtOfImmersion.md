@@ -1,5 +1,5 @@
 ---
-title: "몰입의 기술 회고"
+title: "몰입의 기술"
 date: 2024-05-17 10:00:00 PM +09:00
 categories: [Retrospective, Reading]
 tags: [book, self, developement]

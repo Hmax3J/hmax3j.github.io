@@ -1,5 +1,5 @@
 ---
-title: "비전공자를 위한 이해할 수 있는 IT 지식 회고"
+title: "비전공자를 위한 이해할 수 있는 IT 지식"
 date: 2024-03-28 08:50:00 AM +09:00
 categories: [Retrospective, Reading]
 tags: [book, cs]

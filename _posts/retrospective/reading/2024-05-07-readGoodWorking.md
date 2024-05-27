@@ -1,5 +1,5 @@
 ---
-title: "일 잘하는 사람의 시간은 다르게 흘러간다 회고"
+title: "일 잘하는 사람의 시간은 다르게 흘러간다"
 date: 2024-05-07 05:00:00 PM +09:00
 categories: [Retrospective, Reading]
 tags: [book, motivation, self, improvement]

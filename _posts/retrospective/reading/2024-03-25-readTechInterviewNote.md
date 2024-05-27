@@ -1,5 +1,5 @@
 ---
-title: "개발자 기술면접 노트 회고"
+title: "개발자 기술면접 노트"
 date: 2024-03-25 04:00:00 AM +09:00
 categories: [Retrospective, Reading]
 tags: [book, cs]

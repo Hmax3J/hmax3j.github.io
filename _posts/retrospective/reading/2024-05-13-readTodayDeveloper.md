@@ -1,5 +1,5 @@
 ---
-title: "오늘부터 개발자 회고"
+title: "오늘부터 개발자"
 date: 2024-05-13 02:00:00 AM +09:00
 categories: [Retrospective, Reading]
 tags: [book, developer]

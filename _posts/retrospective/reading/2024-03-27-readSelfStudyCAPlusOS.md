@@ -1,5 +1,5 @@
 ---
-title: "혼자 공부하는 컴퓨터구조 + 운영체제 회고"
+title: "혼자 공부하는 컴퓨터구조 + 운영체제"
 date: 2024-03-27 08:50:00 AM +09:00
 categories: [Retrospective, Reading]
 tags: [book, cs]
