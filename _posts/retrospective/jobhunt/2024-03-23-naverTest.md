@@ -1,5 +1,5 @@
 ---
-title: "네이버 코딩테스트 회고"
+title: "네이버 코딩테스트"
 date: 2024-03-23 12:35:00 PM +09:00
 categories: [Retrospective, Job Hunt]
 tags: [java, algorithm]
