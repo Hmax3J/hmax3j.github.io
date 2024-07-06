@@ -8,6 +8,7 @@ tags: [cs, computer, science, architecture]
 
 >## <span style='color:#1E90FF'>컴퓨터 구조</span>
 컴퓨터 구조를 공부하면서 알게된 내용을 요약해서 작성해보자. <br>
+<a href='https://product.kyobobook.co.kr/detail/S000212650856' target='_blank' style='color:red'>컴퓨터 밑바닥의 비밀</a>을 읽고 작성한 글이다. <br>
 
 >## <span style='color:#1E90FF'>CPU</span>
 - 인류는 boolean logic(불 논리)를 기반으로 CPU를 만들었다. <br>
