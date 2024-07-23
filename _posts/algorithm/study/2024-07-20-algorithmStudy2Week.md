@@ -132,8 +132,8 @@ public class Main {
 - 줄 서기
 - ![algorithm-study](/assets/img/postImg/algorithm/study/2Week/QueueUseEx1.jpg) <br>
     - <a href="https://kr.freepik.com/free-vector/people-in-line-waiting-to-pay_4832282.htm#query=%EC%A4%84%EC%84%9C%EB%8A%94%20%EC%82%AC%EB%9E%8C%EB%93%A4&position=14&from_view=keyword&track=ais_user&uuid=601f8de4-abb6-4271-8313-46a0c79a4da3">작가 pikisuperstar</a> 출처 Freepik <br>
-- ![algorithm-study](/assets/img/postImg/algorithm/study/2Week/QueueUseEx1-2.jpg) <br>
-- ![algorithm-study](/assets/img/postImg/algorithm/study/2Week/QueueUseEx1-3.jpg) <br>
+- ![algorithm-study](/assets/img/postImg/algorithm/study/2Week/QueueUseEx1-2.JPG) <br>
+- ![algorithm-study](/assets/img/postImg/algorithm/study/2Week/QueueUseEx1-3.JPG) <br>
 - 제일 앞에 줄 서있는 사람부터 계산을 하고 나간다. <br>
 
 >## <span style='color:#1E90FF'>큐의 사용예시2</span>
@@ -142,7 +142,7 @@ public class Main {
     - 시작 위치부터 K번째 사람 제거
     - 제거한 위치부터 다시 K번째 사람 제거
     - 3번째 과정을 한 명이 남을 때 까지 반복
-- ![algorithm-study](/assets/img/postImg/algorithm/study/2Week/QueueUseEx2.jpg) <br>
+- ![algorithm-study](/assets/img/postImg/algorithm/study/2Week/QueueUseEx2.JPG) <br>
 ```java
 import java.util.ArrayDeque;
 import java.util.Queue;
