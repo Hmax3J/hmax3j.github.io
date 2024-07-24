@@ -186,6 +186,123 @@ public class Main {
 
 >## <span style='color:#1E90FF'>괄호 회전하기 문제 풀이</span>
 - <a href='https://school.programmers.co.kr/learn/courses/30/lessons/76502' target='_blank' style='color:red'>괄호 회전하기</a> <br>
-- 내가 작성한 풀이
 ```java
+public static int solution(String s) {
+        int count = 0;
+        int n = s.length();
+        for (int i = 0; i < n; i++) {
+            if (isValid(s, i)) {
+                count++;
+            }
+        }
+        return count;
+    }
+    private static boolean isValid(String s, int start) {
+        Stack<Character> stack = new Stack<>();
+        int n = s.length();
+        for (int i = 0; i < n; i++) {
+            char c = s.charAt((start + i) % n);
+            if (c == '(' || c == '{' || c == '[') {
+                stack.push(c);
+            } else {
+                if (stack.isEmpty()) {
+                    return false;
+                }
+                char top = stack.pop();
+                if (!isMatchingPair(top, c)) {
+                    return false;
+                }
+            }
+        }
+        return stack.isEmpty();
+    }
+    private static boolean isMatchingPair(char open, char close) {
+        return (open == '(' && close == ')') ||
+               (open == '{' && close == '}') ||
+               (open == '[' && close == ']');
+    }
 ```
+- 시간복잡도: O(N^2)
+
+>## <span style='color:#1E90FF'>주식 가격 문제 풀이</span>
+- <a href='https://school.programmers.co.kr/learn/courses/30/lessons/42584' target='_blank' style='color:red'>주식 가격</a> <br>
+```java
+    public int[] solution(int[] prices) {
+        ArrayDeque<Integer> stack = new ArrayDeque<>();
+        int length = prices.length;
+        int[] answer = new int[length];
+        stack.push(0);
+        for (int i = 1; i < length; i++) {
+            while(!stack.isEmpty() && prices[i] < prices[stack.peek()]) {
+                int pop = stack.pop();
+                answer[pop] = i - pop;
+            }
+            stack.push(i);
+        }
+        while(!stack.isEmpty()) {
+            int pop = stack.pop();
+            answer[pop] = length - 1 - pop;
+        }
+        return answer;
+    }
+```
+- 시간복잡도: O(N)
+
+>## <span style='color:#1E90FF'>영어 끝말잇기 문제 풀이</span>
+- <a href='https://school.programmers.co.kr/learn/courses/30/lessons/12981' target='_blank' style='color:red'>영어 끝말잇기</a> <br>
+```java
+public int[] solution(int n, String[] words) {
+        Set<String> wordSet = new HashSet<>();
+        wordSet.add(words[0]);
+        for (int i = 1; i < words.length; i++) {
+            String prevWord = words[i - 1];
+            String currentWord = words[i];
+            if (prevWord.charAt(prevWord.length() - 1) != currentWord.charAt(0)
+                || wordSet.contains(currentWord)) {
+                int player = (i % n) + 1;
+                int turn = (i / n) + 1;
+                return new int[]{player, turn};
+            }
+            wordSet.add(currentWord);
+        }
+        return new int[]{0, 0};
+    }
+```
+- 시간복잡도: O(N)
+
+>## <span style='color:#1E90FF'>베스트 앨범 문제 풀이</span>
+- <a href='https://school.programmers.co.kr/learn/courses/30/lessons/42579' target='_blank' style='color:red'>베스트 앨범</a> <br>
+```java
+    static class Song {
+        int plays;
+        int index;
+        Song(int plays, int index) {
+            this.plays = plays;
+            this.index = index;
+        }
+    }
+    public int[] solution(String[] genres, int[] plays) {
+        Map<String, Integer> genrePlayCount = new HashMap<>();
+        Map<String, List<Song>> songsByGenre = new HashMap<>();
+        for (int i = 0; i < genres.length; i++) {
+            String genre = genres[i];
+            int play = plays[i];
+            genrePlayCount.put(genre, genrePlayCount.getOrDefault(genre, 0) + play);
+            songsByGenre.putIfAbsent(genre, new ArrayList<>());
+            songsByGenre.get(genre).add(new Song(play, i));
+        }
+        List<String> sortedGenres = new ArrayList<>(genrePlayCount.keySet());
+        sortedGenres.sort((a, b) -> genrePlayCount.get(b) - genrePlayCount.get(a));
+        List<Integer> bestAlbum = new ArrayList<>();
+        for (String genre : sortedGenres) {
+            List<Song> songs = songsByGenre.get(genre);
+            songs.sort((a, b) -> b.plays == a.plays ? a.index - b.index : b.plays - a.plays);
+            for (int i = 0; i < Math.min(2, songs.size()); i++) {
+                bestAlbum.add(songs.get(i).index);
+            }
+        }
+        return bestAlbum.stream().mapToInt(i -> i).toArray();
+    }
+```
+- 못 풀었다... ↑ 다른 사람의 풀이 ↑ <br>
+- 시간복잡도: O(n log n)
