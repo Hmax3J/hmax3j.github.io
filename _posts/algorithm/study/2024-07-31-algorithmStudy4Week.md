@@ -57,27 +57,27 @@ Youtube : <a href='https://inf.run/t92e1' target='_blank' style='color:red'>코�
 >## <span style='color:#1E90FF'>이진 트리의 순회 - 전위 순회</span>
 - 부모 노드 -> 왼쪽 자식 노드 -> 오른쪽 자식 노드 순으로 방문한다. <br>
 - 루트노드 부터 시작 <br>
-- ![algorithm-study](/assets/img/postImg/algorithm/study/4Week/treeVanguardCircuit.JPG)
+- ![algorithm-study](/assets/img/postImg/algorithm/study/4Week/treePreorderCircuit.JPG)
     - 1이 루트 노드라 1부터 시작한다.
     - 1은 부모 노드이니 방문한다.
     - 1의 자식 노드 중 왼 쪽인 4를 방문한다.
-- ![algorithm-study](/assets/img/postImg/algorithm/study/4Week/treeVanguardCircuit2.JPG)
+- ![algorithm-study](/assets/img/postImg/algorithm/study/4Week/treePreorderCircuit2.JPG)
     - 다음은 오른쪽 자식 노드를 방문해야 하지만 4는 자식이 있어 부모 노드가 된다.
     - 4의 왼쪽 자식 노드인 3을 방문한다.
-- ![algorithm-study](/assets/img/postImg/algorithm/study/4Week/treeVanguardCircuit3.JPG)
+- ![algorithm-study](/assets/img/postImg/algorithm/study/4Week/treePreorderCircuit3.JPG)
     - 여기서도 오른쪽 노드를 방문해야 하지만 3이 부모 노드라 자식인 2를 방문한다.
-- ![algorithm-study](/assets/img/postImg/algorithm/study/4Week/treeVanguardCircuit4.JPG)
+- ![algorithm-study](/assets/img/postImg/algorithm/study/4Week/treePreorderCircuit4.JPG)
     - 2는 부모 노드지만 자식이 없어 가장 최근에 방문한 곳으로 돌아간다.
     - 3은 이미 방문을 했고 오른쪽 자식 노드가 없어 3을 방문하기 전인 4로 돌아간다.
-- ![algorithm-study](/assets/img/postImg/algorithm/study/4Week/treeVanguardCircuit5.JPG)
+- ![algorithm-study](/assets/img/postImg/algorithm/study/4Week/treePreorderCircuit5.JPG)
     - 4에는 오른쪽 자식 노드가 있어 5를 방문한다.
     - 5에는 자식 노드가 없어 최근에 방문한 곳으로 돌아간다.
     - 4는 모든 노드를 방문했기 때문에 4를 방문하기 전인 1로 돌아간다.
-- ![algorithm-study](/assets/img/postImg/algorithm/study/4Week/treeVanguardCircuit6.JPG)
+- ![algorithm-study](/assets/img/postImg/algorithm/study/4Week/treePreorderCircuit6.JPG)
     - 1에는 오른쪽 자식 노드가 있어 8을 방문한다.
-- ![algorithm-study](/assets/img/postImg/algorithm/study/4Week/treeVanguardCircuit7.JPG)
+- ![algorithm-study](/assets/img/postImg/algorithm/study/4Week/treePreorderCircuit7.JPG)
     - 8에는 왼쪽 자식 노드가 없으니 오른쪽 자식 노드인 7을 방문한다.
-- ![algorithm-study](/assets/img/postImg/algorithm/study/4Week/treeVanguardCircuit8.JPG)
+- ![algorithm-study](/assets/img/postImg/algorithm/study/4Week/treePreorderCircuit8.JPG)
     - 7의 왼쪽 자식 노드인 6을 방문한다.
     - 모든 노드를 방문했으니 순회를 종료한다.
 ```java
