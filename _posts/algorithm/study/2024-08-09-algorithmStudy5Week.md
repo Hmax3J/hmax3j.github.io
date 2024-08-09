@@ -81,7 +81,7 @@ Youtube : <a href='https://inf.run/t92e1' target='_blank' style='color:red'>코�
     - 대표 원소는 현재 노드와 부모 노드가 같다.
     - 배열을 활용해서 나타낼 수 있다. (현재 노드는 인덱스, 부모 노드는 값)
     - 부모 노드가 없다면 자기 자신을 기록한다.
-    - 집합에 없는 노드는 배열의 해당하는 인덱스를 -1로 기록한다.
+    - 집합에 없는 노드는 배열의 해당하는 인덱스의 값을 -1로 기록한다.
 
 >## <span style='color:#1E90FF'>집합의 연산 - find</span>
 - 특정 노드의 루트 노드를 확인하는 연산
@@ -169,4 +169,38 @@ Youtube : <a href='https://inf.run/t92e1' target='_blank' style='color:red'>코�
 >## <span style='color:#1E90FF'>섬 연결하기 문제 풀이</span>
 - <a href='https://school.programmers.co.kr/learn/courses/30/lessons/42861' target='_blank' style='color:red'>섬 연결하기</a> <br>
 - ```java
+    private static int find(int[] parent, int x) {
+        if (parent[x] == x) {
+            return x;
+        }
+        return parent[x] = find(parent, parent[x]);
+    }
+    private static void union(int[] parent, int x, int y) {
+        int rootX = find(parent, x);
+        int rootY = find(parent, y);
+        parent[rootY] = rootX;
+    }
+    public int solution(int n, int[][] costs) {
+        Arrays.sort(costs, (o1, o2) -> Integer.compare(o1[2], o2[2]));
+        int[] parent = new int[n];
+        for (int i = 0; i < n; i++) {
+            parent[i] = i;
+        }
+        int answer = 0;
+        int edges = 0;
+        for (int[] edge : costs) {
+            if (edges == n - 1) {
+                break;
+            }
+            if (find(parent, edge[0]) != find(parent, edge[1])) {
+                union(parent, edge[0], edge[1]);
+                answer += edge[2];
+                edges++;
+            }
+        }
+        return answer;
+    }
 ```
+- 못 풀었다. ㅠㅠ ↑ 풀이 ↑ <br>
+- 부모 노드 찾아서 연결 되어 있으면 비용 더하기로 풀려고 했는데 못 풀었다. <br>
+- union을 왜 해야 하는지에 대해 생각 해봐야겠다. <br>
