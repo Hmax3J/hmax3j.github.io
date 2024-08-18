@@ -500,7 +500,56 @@ Youtube : <a href='https://inf.run/t92e1' target='_blank' style='color:red'>코�
 
 >## <span style='color:#1E90FF'>전력망을 둘로 나누기 문제 풀이</span>
 - <a href='https://school.programmers.co.kr/learn/courses/30/lessons/86971' target='_blank' style='color:red'>전력망을 둘로 나누기</a>
-
+- ```java
+    import java.util.*;
+                                                .
+    class Solution {
+        private static boolean[] visited;
+        private static List<Integer>[] adj;
+        private static int N, answer;
+                                                    .
+        public int solution(int n, int[][] wires) {
+            N = n;
+            answer = n - 1;
+                                                    .
+            adj = new ArrayList[n + 1];
+            for (int i = 1; i <= n; i++) {
+                adj[i] = new ArrayList<>();
+            }
+                                                 .
+            for (int[] wire : wires) {
+                adj[wire[0]].add(wire[1]);
+                adj[wire[1]].add(wire[0]);
+            }
+                                                .
+            visited = new boolean[n + 1];
+                                                .
+            dfs(1);
+                                                .
+            return answer;
+        }
+                                                .
+        private static int dfs(int now) {
+            visited[now] = true;
+                                                .
+            int sum = 0;
+                                                .
+            for (int next : adj[now]) {
+                if (!visited[next]) {
+                    int cnt = dfs(next);
+                                                                        .
+                    answer = Math.min(answer, Math.abs(N - cnt * 2));
+                                                                        .
+                    sum += cnt;
+                }
+            }
+                                                                        .
+            return sum + 1;
+        }
+    }
+```
+- 못 풀었다. ㅠㅠ ↑ 풀이 ↑
+- dfs의 answer와 sum을 구하는 방법이 이해가 되질 않는다. 계속 풀어보고 복습해야겠다.
 
 >## <span style='color:#1E90FF'>양과 늑대 문제 풀이</span>
 - <a href='https://school.programmers.co.kr/learn/courses/30/lessons/92343' target='_blank' style='color:red'>양과 늑대</a>
