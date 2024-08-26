@@ -1,7 +1,7 @@
 ---
 title: "JAVA 개선된 Switch문"
 date: 2024-02-23 06:00:00 PM +09:00
-categories: [JAVA, Syntax_controlStatements]
+categories: [Back-End, JAVA]
 tags: [java, syntax, controlstatements]
 ---
 ***

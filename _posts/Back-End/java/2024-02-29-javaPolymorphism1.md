@@ -1,7 +1,7 @@
 ---
 title: "JAVA OOP, 다형적 참조"
 date: 2024-02-29 10:00:00 PM +09:00
-categories: [JAVA, OOP_Polymorphism]
+categories: [Back-End, JAVA]
 tags: [java, oop, polymorphism, extends]
 ---
 ***

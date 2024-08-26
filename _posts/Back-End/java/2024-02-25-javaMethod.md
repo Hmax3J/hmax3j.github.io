@@ -1,7 +1,7 @@
 ---
 title: "JAVA Method 호출과 반환"
 date: 2024-02-25 6:00:00 PM +09:00
-categories: [JAVA, Syntax_Method]
+categories: [Back-End, JAVA]
 tags: [java, syntax, method]
 ---
 ***

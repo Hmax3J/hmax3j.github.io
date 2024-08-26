@@ -1,7 +1,7 @@
 ---
 title: "JAVA DataType, 기본형과 참조형"
 date: 2024-02-27 11:00:00 AM +09:00
-categories: [JAVA, Syntax_DataType]
+categories: [Back-End, JAVA]
 tags: [java, syntax, datatype, method]
 ---
 ***
