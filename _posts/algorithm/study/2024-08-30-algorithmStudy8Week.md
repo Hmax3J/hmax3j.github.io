@@ -138,6 +138,9 @@ Youtube : <a href='https://inf.run/t92e1' target='_blank' style='color:red'>코�
     }
 ```
 
+>## <span style='color:#1E90FF'>각 정렬 알고리즘 비교</span>
+- ![algorithm-study](/assets/img/postImg/algorithm/study/8Week/sortCompare.JPG)
+
 >## <span style='color:#1E90FF'>문자열 내 마음대로 정렬하기 문제 풀이</span>
 - <a href='https://school.programmers.co.kr/learn/courses/30/lessons/12915' target='_blank' style='color:red'>문자열 내 마음대로 정렬하기</a>
 
