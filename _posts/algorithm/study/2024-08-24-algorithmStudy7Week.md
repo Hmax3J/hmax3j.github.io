@@ -208,9 +208,148 @@ Youtube : <a href='https://inf.run/t92e1' target='_blank' style='color:red'>코�
 
 >## <span style='color:#1E90FF'>피로도 문제 풀이</span>
 - <a href='https://school.programmers.co.kr/learn/courses/30/lessons/87946' target='_blank' style='color:red'>피로도</a>
+- ```java
+    class Solution {
+        private static int answer;
+        private static int[][] Dungeons;
+        private static boolean[] visited;
+                                                                //
+        public int solution(int k, int[][] dungeons) {
+            answer = 0;
+            Dungeons = dungeons;
+                                                                //
+            visited = new boolean[Dungeons.length];
+                                                                //
+            back(k, 0);
+                                                                //
+            return answer;
+        }
+                                                                //
+        private static void back(int k, int cnt) {
+            for (int i = 0; i < Dungeons.length; i++) {
+                                                                //
+                if (!visited[i] && k >= Dungeons[i][0]) {
+                    visited[i] = true;
+                                                                //
+                    back(k - Dungeons[i][1], cnt + 1);
+                    answer = Math.max(answer, cnt + 1);
+                    visited[i] = false;
+                }
+                                                                //
+            }
+        }
+    }
+```
+- 못 풀었다. ↑ 풀이 ↑
+- 다른 사람 풀이를 보면 코드는 이해 할 수 있지만, 이 코드들이 왜 필요한 지 파악하는 것이 어렵다.
+- 이 풀이들이 내 것이 될 수 있도록 복습하고 계속 풀어 봐야겠다.
 
 >## <span style='color:#1E90FF'>N-Queen 문제 풀이</span>
 - <a href='https://school.programmers.co.kr/learn/courses/30/lessons/12952' target='_blank' style='color:red'>N-Queen</a>
+- ```java
+    class Solution {
+        private static int N;
+        private static boolean[] width;
+        private static boolean[] diagonal1;
+        private static boolean[] diagonal2;
+                                                            //
+        public int solution(int n) {
+            N = n;
+            width = new boolean[n];
+            diagonal1 = new boolean[n * 2];
+            diagonal2 = new boolean[n * 2];
+                                                            //
+            int answer = getAns(0);
+                                                            //
+            return answer;
+        }
+                                                            //
+        private static int getAns(int y) {
+            int ans = 0;
+                                                            //
+            if (y == N) {
+                ans++;
+            } else {
+                for (int i = 0; i < N; i++) {
+                    if (width[i] || diagonal1[i + y] || diagonal2[i - y + N]) {
+                        continue;
+                    }
+                                                                                        //
+                    width[i] = diagonal1[i + y] = diagonal2[i - y + N] = true;
+                                                                                        //
+                    ans += getAns(y + 1);
+                                                                                        //
+                    width[i] = diagonal1[i + y] = diagonal2[i - y + N] = false;
+                }
+            }
+                                                                                        //
+            return ans;
+        }
+    }
+```
+- 못 풀었다. ↑ 풀이 ↑
+- 풀면 풀수록 어렵다 ㅠㅠ 언젠가는 혼자서 풀 수 있도록 반복 숙달 필수...
 
 >## <span style='color:#1E90FF'>양궁 대회 문제 풀이</span>
 - <a href='https://school.programmers.co.kr/learn/courses/30/lessons/92342' target='_blank' style='color:red'>양궁 대회</a>
+- ```java
+    class Solution {
+        private static int max;
+        private static int[] answer;
+        private static int[] apeach;
+                                                            //
+        private static int getScore(int[] ryan) {
+            int score = 0;
+                                                            //
+            for (int i = 0; i <= 10; i++) {
+                if (ryan[i] + apeach[i] > 0) {
+                    score += ryan[i] > apeach[i] ? (10 - i) : -(10 - i);
+                }
+            }
+                                                            //
+            return score;
+        }
+                                                            //
+        private static void calculateDiff(int[] ryan) {
+            int score = getScore(ryan);
+                                                            //
+            if (max < score) {
+                max = score;
+                answer = ryan.clone();
+            } else if (max > 0 && max == score) {
+                                                            //
+                for (int i = 10; i >= 0; i--) {
+                    if (answer[i] != ryan[i]) {
+                        if (answer[i] < ryan[i]) {
+                            answer = ryan.clone();
+                        }
+                        break;
+                    }
+                }
+            }
+        }
+                                                            //
+        private static void backtrack(int n, int idx, int[] ryan) {
+            if (n == 0) {
+                calculateDiff(ryan);
+                return;
+            }
+                                                                        //
+            for (int i = idx; i <= 10; i++) {
+                int cnt = Math.min(n, apeach[i] + 1);
+                ryan[i] = cnt;
+                backtrack(n - cnt, i + 1, ryan);
+                ryan[i] = 0;
+            }
+        }
+                                                                        //
+        public static int[] solution(int n, int[] info) {
+            apeach = info;
+            max = 0;
+            backtrack(n, 0, new int[11]);
+                                                                        //
+            return max == 0 ? new int[]{-1} : answer;
+        }
+    }
+```
+- 못 풀었다. ↑ 풀이 ↑
