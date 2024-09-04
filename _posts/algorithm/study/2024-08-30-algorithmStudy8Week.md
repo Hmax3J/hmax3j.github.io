@@ -9,8 +9,6 @@ tags: [java, algorithm, study]
 >## <span style='color:#1E90FF'>코딩테스트 합격자 되기 스터디 8주차</span>
 강의 보기 -> 해당되는 부분 책 다시 읽기 -> 블로그 정리 <br>
 강의는 C++로 되어 있지만 개념적인 내용이라 언어 상관 없이 보고 코드는 각 언어에 맞게 바꾸면 된다. <br>
-이번 주차가 일정의 마지막 주차인데 스터디 전체 참여율이 50%가 넘을 경우, <br>
-다음 주차도 계속 진행한다고 한다! 다음 주차도 하면 좋겠다ㅎㅎ <br>
 
 >## <span style='color:#1E90FF'>참고 강의 및 책</span>
 인프런 : <a href='https://inf.run/t92e1' target='_blank' style='color:red'>코딩테스트 합격자 되기 파이썬, C+_+ 저자님 인프런 강의 링크</a> <br>
